@@ -13,33 +13,43 @@ const Services = db.services;
 
 const CategoriesData = [
   {
-    name: 'Neils Bohr',
+    name: 'Linus Pauling',
   },
 
   {
-    name: 'Joseph J. Thomson',
+    name: 'William Bayliss',
   },
 
   {
-    name: 'James Clerk Maxwell',
+    name: 'Antoine Laurent Lavoisier',
+  },
+
+  {
+    name: 'Edwin Hubble',
   },
 ];
 
 const DashboardsData = [
   {
-    title: 'Stephen Hawking',
+    title: 'Albrecht von Haller',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Werner Heisenberg',
+    title: 'Frederick Sanger',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Johannes Kepler',
+    title: 'Gertrude Belle Elion',
+
+    // type code here for "relation_many" field
+  },
+
+  {
+    title: 'Gregor Mendel',
 
     // type code here for "relation_many" field
   },
@@ -63,6 +73,12 @@ const PersistentDataData = [
 
     // type code here for "relation_one" field
   },
+
+  {
+    data: 'Recent activity logs',
+
+    // type code here for "relation_one" field
+  },
 ];
 
 const PortalsData = [
@@ -83,29 +99,43 @@ const PortalsData = [
 
     url: 'https://support.appwizzy.com',
   },
+
+  {
+    name: 'Analytics Portal',
+
+    url: 'https://analytics.appwizzy.com',
+  },
 ];
 
 const ServicesData = [
   {
-    name: 'Noam Chomsky',
+    name: 'Max von Laue',
 
-    description: 'Claude Bernard',
-
-    // type code here for "relation_one" field
-  },
-
-  {
-    name: 'Wilhelm Wundt',
-
-    description: 'Frederick Sanger',
+    description: 'Marcello Malpighi',
 
     // type code here for "relation_one" field
   },
 
   {
-    name: 'Claude Bernard',
+    name: 'Konrad Lorenz',
 
-    description: 'Isaac Newton',
+    description: 'Rudolf Virchow',
+
+    // type code here for "relation_one" field
+  },
+
+  {
+    name: 'Louis Victor de Broglie',
+
+    description: 'Lynn Margulis',
+
+    // type code here for "relation_one" field
+  },
+
+  {
+    name: 'Jean Piaget',
+
+    description: 'James Watson',
 
     // type code here for "relation_one" field
   },
@@ -148,6 +178,17 @@ async function associatePersistentDatumWithUser() {
   if (PersistentDatum2?.setUser) {
     await PersistentDatum2.setUser(relatedUser2);
   }
+
+  const relatedUser3 = await Users.findOne({
+    offset: Math.floor(Math.random() * (await Users.count())),
+  });
+  const PersistentDatum3 = await PersistentData.findOne({
+    order: [['id', 'ASC']],
+    offset: 3,
+  });
+  if (PersistentDatum3?.setUser) {
+    await PersistentDatum3.setUser(relatedUser3);
+  }
 }
 
 async function associateServiceWithCategory() {
@@ -182,6 +223,17 @@ async function associateServiceWithCategory() {
   });
   if (Service2?.setCategory) {
     await Service2.setCategory(relatedCategory2);
+  }
+
+  const relatedCategory3 = await Categories.findOne({
+    offset: Math.floor(Math.random() * (await Categories.count())),
+  });
+  const Service3 = await Services.findOne({
+    order: [['id', 'ASC']],
+    offset: 3,
+  });
+  if (Service3?.setCategory) {
+    await Service3.setCategory(relatedCategory3);
   }
 }
 
