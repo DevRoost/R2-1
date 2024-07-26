@@ -1,0 +1,34 @@
+@import 'tailwind/_base.css';
+@import 'tailwind/_components.css';
+@import 'tailwind/_utilities.css';
+
+@import '_checkbox-radio-switch.css';
+@import '_progress.css';
+@import '_scrollbars.css';
+@import '_table.css';
+@import '_helper.css';
+@import '_calendar.css';
+@import '_select-dropdown.css';
+@import '_theme.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&display=swap');
+
+body {
+  @apply font-sans text-primaryText !important;
+}
+.MuiList-root,
+.MuiListItemIcon-root {
+  @apply text-neonGreenTheme-buttonColor  bg-gray-600  !important;
+}
+.MuiCheckbox-colorPrimary {
+  @apply text-neonGreenTheme-buttonColor !important;
+}
+.MuiDataGrid-row.Mui-selected {
+  @apply bg-neonGreenTheme-mainBG !important;
+}
+.MuiDataGrid-withBorderColor {
+  @apply border-neonGreenTheme-mainBG !important;
+}
+.MuiDataGrid-cell:focus {
+  @apply outline-neonGreenTheme-buttonColor !important;
+}
