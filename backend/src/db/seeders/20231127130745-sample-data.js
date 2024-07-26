@@ -13,43 +13,43 @@ const Services = db.services;
 
 const CategoriesData = [
   {
-    name: 'Linus Pauling',
+    name: 'Tycho Brahe',
   },
 
   {
-    name: 'William Bayliss',
+    name: 'Nicolaus Copernicus',
   },
 
   {
-    name: 'Antoine Laurent Lavoisier',
+    name: 'Richard Feynman',
   },
 
   {
-    name: 'Edwin Hubble',
+    name: 'Ernst Haeckel',
   },
 ];
 
 const DashboardsData = [
   {
-    title: 'Albrecht von Haller',
+    title: 'James Watson',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Frederick Sanger',
+    title: 'Jonas Salk',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Gertrude Belle Elion',
+    title: 'B. F. Skinner',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Gregor Mendel',
+    title: 'Justus Liebig',
 
     // type code here for "relation_many" field
   },
@@ -109,33 +109,33 @@ const PortalsData = [
 
 const ServicesData = [
   {
-    name: 'Max von Laue',
+    name: 'John Dalton',
 
-    description: 'Marcello Malpighi',
-
-    // type code here for "relation_one" field
-  },
-
-  {
-    name: 'Konrad Lorenz',
-
-    description: 'Rudolf Virchow',
+    description: 'Wilhelm Wundt',
 
     // type code here for "relation_one" field
   },
 
   {
-    name: 'Louis Victor de Broglie',
+    name: 'William Herschel',
 
-    description: 'Lynn Margulis',
+    description: 'Heike Kamerlingh Onnes',
 
     // type code here for "relation_one" field
   },
 
   {
-    name: 'Jean Piaget',
+    name: 'Johannes Kepler',
 
-    description: 'James Watson',
+    description: 'Alfred Kinsey',
+
+    // type code here for "relation_one" field
+  },
+
+  {
+    name: 'Pierre Simon de Laplace',
+
+    description: 'Frederick Gowland Hopkins',
 
     // type code here for "relation_one" field
   },
