@@ -13,43 +13,33 @@ const Services = db.services;
 
 const CategoriesData = [
   {
-    name: 'Wilhelm Wundt',
+    name: 'Neils Bohr',
   },
 
   {
-    name: 'Ernest Rutherford',
+    name: 'Joseph J. Thomson',
   },
 
   {
-    name: 'Michael Faraday',
-  },
-
-  {
-    name: 'Linus Pauling',
+    name: 'James Clerk Maxwell',
   },
 ];
 
 const DashboardsData = [
   {
-    title: 'Gustav Kirchhoff',
+    title: 'Stephen Hawking',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Gregor Mendel',
+    title: 'Werner Heisenberg',
 
     // type code here for "relation_many" field
   },
 
   {
-    title: 'Albrecht von Haller',
-
-    // type code here for "relation_many" field
-  },
-
-  {
-    title: 'Neils Bohr',
+    title: 'Johannes Kepler',
 
     // type code here for "relation_many" field
   },
@@ -73,12 +63,6 @@ const PersistentDataData = [
 
     // type code here for "relation_one" field
   },
-
-  {
-    data: 'Recent activity logs',
-
-    // type code here for "relation_one" field
-  },
 ];
 
 const PortalsData = [
@@ -99,35 +83,21 @@ const PortalsData = [
 
     url: 'https://support.appwizzy.com',
   },
-
-  {
-    name: 'Analytics Portal',
-
-    url: 'https://analytics.appwizzy.com',
-  },
 ];
 
 const ServicesData = [
   {
-    name: 'Theodosius Dobzhansky',
+    name: 'Noam Chomsky',
 
-    description: 'Justus Liebig',
-
-    // type code here for "relation_one" field
-  },
-
-  {
-    name: 'Hermann von Helmholtz',
-
-    description: 'Hans Selye',
+    description: 'Claude Bernard',
 
     // type code here for "relation_one" field
   },
 
   {
-    name: 'James Clerk Maxwell',
+    name: 'Wilhelm Wundt',
 
-    description: 'Stephen Hawking',
+    description: 'Frederick Sanger',
 
     // type code here for "relation_one" field
   },
@@ -135,7 +105,7 @@ const ServicesData = [
   {
     name: 'Claude Bernard',
 
-    description: 'Marie Curie',
+    description: 'Isaac Newton',
 
     // type code here for "relation_one" field
   },
@@ -178,17 +148,6 @@ async function associatePersistentDatumWithUser() {
   if (PersistentDatum2?.setUser) {
     await PersistentDatum2.setUser(relatedUser2);
   }
-
-  const relatedUser3 = await Users.findOne({
-    offset: Math.floor(Math.random() * (await Users.count())),
-  });
-  const PersistentDatum3 = await PersistentData.findOne({
-    order: [['id', 'ASC']],
-    offset: 3,
-  });
-  if (PersistentDatum3?.setUser) {
-    await PersistentDatum3.setUser(relatedUser3);
-  }
 }
 
 async function associateServiceWithCategory() {
@@ -223,17 +182,6 @@ async function associateServiceWithCategory() {
   });
   if (Service2?.setCategory) {
     await Service2.setCategory(relatedCategory2);
-  }
-
-  const relatedCategory3 = await Categories.findOne({
-    offset: Math.floor(Math.random() * (await Categories.count())),
-  });
-  const Service3 = await Services.findOne({
-    order: [['id', 'ASC']],
-    offset: 3,
-  });
-  if (Service3?.setCategory) {
-    await Service3.setCategory(relatedCategory3);
   }
 }
 
