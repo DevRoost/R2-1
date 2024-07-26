@@ -125,7 +125,7 @@ export default function LayoutAuthenticated({
           onAsideLgClose={() => setIsAsideLgActive(false)}
         />
         {children}
-        <FooterBar>powered by Starkien Tech</FooterBar>
+       
       </div>
     </div>
   );

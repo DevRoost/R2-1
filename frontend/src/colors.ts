@@ -83,6 +83,7 @@ export const getButtonColor = (
         'bg-neonGreenTheme-outsideCardColor text-red-500 dark:text-white    dark:bg-red-500 ',
       warning: 'bg-yellow-600 dark:bg-yellow-500 text-white',
       info: ' bg-neonGreenTheme-buttonColor  dark:bg-pavitra-blue  text-black ',
+      shwdow:'bg-boxShadowTheme-color'
     },
     bgHover: {
       white: 'hover:bg-gray-100',

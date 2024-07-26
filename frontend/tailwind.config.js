@@ -62,16 +62,20 @@ module.exports = {
         },
 
         neonGreenTheme: {
-          text: '#FFFFFF',
+          text: '#000',
           iconsColor: '#51F2E9',
-          mainBG: '#222222',
+          mainBG: '#fff',
           buttonColor: '#51F2E9',
           cardColor: '#484848',
-          outsideCardColor: '#3A3A3A',
+          outsideCardColor: '#f3f4ed',
+          boxShadow:'#f3f4ed',
           900: '#14142A',
-          800: '#222222',
+          800: '#fff',
         },
-        primaryText: '#FFFFFF',
+        boxShadowTheme: {
+         color:"rgba(0,0,0,0.5)"
+        },
+        primaryText: '#000',
       },
       fontFamily: {
         sans: ['Nunito Sans', 'sans-serif'],

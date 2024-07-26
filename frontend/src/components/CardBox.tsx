@@ -35,7 +35,7 @@ export default function CardBox({
   const corners = useAppSelector((state) => state.style.corners);
   const cardsStyle = useAppSelector((state) => state.style.cardsStyle);
   const componentClass = [
-    `flex  dark:border-dark-700 dark:bg-dark-900`,
+    `flex  dark:border-dark-700 dark:bg-dark-900 customHover`,
     className,
     corners !== 'rounded-full' ? corners : 'rounded-3xl',
     flex,

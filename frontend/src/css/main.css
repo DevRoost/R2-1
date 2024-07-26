@@ -32,3 +32,27 @@ body {
 .MuiDataGrid-cell:focus {
   @apply outline-neonGreenTheme-buttonColor !important;
 }
+.height250{
+  height: 250px;
+}
+.w-100{
+  width: 100%;
+}
+.ProseMirror{
+  height: inherit;
+}
+.customcardLayout{
+  display: flex;
+  align-items: end;
+  justify-content:space-between;
+  border-radius: 10px;
+}
+.customHover:hover{
+  @apply text-neonGreenTheme-buttonColor !important;
+  box-shadow: 10px 10px 10px ;
+}
+.boxShadow{
+  
+  
+  box-shadow: 0pc 10px 15px rgb(197 197 197);
+}

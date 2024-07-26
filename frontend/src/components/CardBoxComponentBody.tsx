@@ -12,8 +12,9 @@ export default function CardBoxComponentBody({
   children,
 }: Props) {
   return (
-    <div className={`flex-1 ${noPadding ? '' : 'p-6'} ${className}`}>
+    <div className={`flex-1 customcardLayout ${noPadding ? '' : 'p-6'} ${className}`} >
       {children}
+      <a>&#8594;</a>
     </div>
   );
 }

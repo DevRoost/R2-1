@@ -7,87 +7,126 @@ const menuAside: MenuAsideItem[] = [
     icon: icon.mdiViewDashboardOutline,
     label: 'Dashboard',
   },
+  {
+    href: '/rediChart',
+    icon: icon.mdiViewDashboardOutline,
+    label: 'RediLearn',
+  },
+  {
+    href: '/rediLearn',
+    icon: icon.mdiViewDashboardOutline,
+    label: 'RediChart',
+  },
 
   {
-    href: '/users/users-list',
-    label: 'Users',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    icon: icon.mdiAccountGroup ? icon.mdiAccountGroup : icon.mdiTable,
-    permissions: 'READ_USERS',
+    href: '/canvas',
+    icon: icon.mdiViewDashboardOutline,
+    label: 'Canvas',
   },
+
   {
-    href: '/categories/categories-list',
-    label: 'Categories',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    icon: icon.mdiTag ? icon.mdiTag : icon.mdiTable,
-    permissions: 'READ_CATEGORIES',
+    href: '/rediCall',
+    icon: icon.mdiViewDashboardOutline,
+    label: 'RediCall',
   },
+
   {
-    href: '/dashboards/dashboards-list',
-    label: 'Dashboards',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    icon: icon.mdiViewDashboard ? icon.mdiViewDashboard : icon.mdiTable,
-    permissions: 'READ_DASHBOARDS',
+    href: '/rediPlot',
+    icon: icon.mdiViewDashboardOutline,
+    label: 'RediPlot',
   },
-  {
-    href: '/persistent_data/persistent_data-list',
-    label: 'Persistent data',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    icon: icon.mdiDatabase ? icon.mdiDatabase : icon.mdiTable,
-    permissions: 'READ_PERSISTENT_DATA',
-  },
-  {
-    href: '/portals/portals-list',
-    label: 'Portals',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    icon: icon.mdiWeb ? icon.mdiWeb : icon.mdiTable,
-    permissions: 'READ_PORTALS',
-  },
-  {
-    href: '/services/services-list',
-    label: 'Services',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    icon: icon.mdiBriefcase ? icon.mdiBriefcase : icon.mdiTable,
-    permissions: 'READ_SERVICES',
-  },
-  {
-    href: '/roles/roles-list',
-    label: 'Roles',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    icon: icon.mdiShieldAccountVariantOutline
-      ? icon.mdiShieldAccountVariantOutline
-      : icon.mdiTable,
-    permissions: 'READ_ROLES',
-  },
-  {
-    href: '/permissions/permissions-list',
-    label: 'Permissions',
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    icon: icon.mdiShieldAccountOutline
-      ? icon.mdiShieldAccountOutline
-      : icon.mdiTable,
-    permissions: 'READ_PERMISSIONS',
-  },
-  {
-    href: '/profile',
-    label: 'Profile',
-    icon: icon.mdiAccountCircle,
-  },
-  {
-    href: '/api-docs',
-    target: '_blank',
-    label: 'Swagger API',
-    icon: icon.mdiFileCode,
-    permissions: 'READ_API_DOCS',
-  },
+
+
+
+  // {
+  //   href: 'https://nexus.enleslabs.com/sign-in?target=%2F',
+  //   target: '_blank',
+  //   label: 'RediPlot',
+  //   icon: icon.mdiFileCode,
+  //   permissions: 'READ_API_DOCS',
+  // },
+
+
+  // {
+  //   href: '/users/users-list',
+  //   label: 'Users',
+  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   // @ts-ignore
+  //   icon: icon.mdiAccountGroup ? icon.mdiAccountGroup : icon.mdiTable,
+  //   permissions: 'READ_USERS',
+  // },
+  // {
+  //   href: '/categories/categories-list',
+  //   label: 'Categories',
+  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   // @ts-ignore
+  //   icon: icon.mdiTag ? icon.mdiTag : icon.mdiTable,
+  //   permissions: 'READ_CATEGORIES',
+  // },
+  // {
+  //   href: '/dashboards/dashboards-list',
+  //   label: 'Dashboards',
+  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   // @ts-ignore
+  //   icon: icon.mdiViewDashboard ? icon.mdiViewDashboard : icon.mdiTable,
+  //   permissions: 'READ_DASHBOARDS',
+  // },
+  // {
+  //   href: '/persistent_data/persistent_data-list',
+  //   label: 'Persistent data',
+  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   // @ts-ignore
+  //   icon: icon.mdiDatabase ? icon.mdiDatabase : icon.mdiTable,
+  //   permissions: 'READ_PERSISTENT_DATA',
+  // },
+  // {
+  //   href: '/portals/portals-list',
+  //   label: 'Portals',
+  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   // @ts-ignore
+  //   icon: icon.mdiWeb ? icon.mdiWeb : icon.mdiTable,
+  //   permissions: 'READ_PORTALS',
+  // },
+  // {
+  //   href: '/services/services-list',
+  //   label: 'Services',
+  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   // @ts-ignore
+  //   icon: icon.mdiBriefcase ? icon.mdiBriefcase : icon.mdiTable,
+  //   permissions: 'READ_SERVICES',
+  // },
+  // {
+  //   href: '/roles/roles-list',
+  //   label: 'Roles',
+  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   // @ts-ignore
+  //   icon: icon.mdiShieldAccountVariantOutline
+  //     ? icon.mdiShieldAccountVariantOutline
+  //     : icon.mdiTable,
+  //   permissions: 'READ_ROLES',
+  // },
+  // {
+  //   href: '/permissions/permissions-list',
+  //   label: 'Permissions',
+  //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  //   // @ts-ignore
+  //   icon: icon.mdiShieldAccountOutline
+  //     ? icon.mdiShieldAccountOutline
+  //     : icon.mdiTable,
+  //   permissions: 'READ_PERMISSIONS',
+  // },
+  // {
+  //   href: '/profile',
+  //   label: 'Profile',
+  //   icon: icon.mdiAccountCircle,
+  // },
+  // {
+  //   href: '/api-docs',
+  //   target: '_blank',
+  //   label: 'Swagger API',
+  //   icon: icon.mdiFileCode,
+  //   permissions: 'READ_API_DOCS',
+  // },
 ];
 
 export default menuAside;
